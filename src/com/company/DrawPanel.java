@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.elements.Cloud;
+import com.company.elements.Tree;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -37,9 +40,18 @@ public class DrawPanel extends JPanel {
 //        }
 //        g.draw(s);
 
-        DrawingUtils.drawTree(g, 300, 600, new Color(160, 82, 45), new Color(34, 139, 34), 85);
+        Cloud cloud1 = new Cloud(90, 70, 9, 80, new Color(255, 240, 245), new Color(245, 255, 250), new Color(240, 248, 255));
+        Cloud cloud2 = new Cloud(900, 140, 7, 80, new Color(255, 240, 245), new Color(245, 255, 250), new Color(240, 248, 255));
+        Cloud cloud3 = new Cloud(400, 40, 13, 80, new Color(255, 240, 245), new Color(245, 255, 250), new Color(240, 248, 255));
+        cloud1.draw(g);
+        cloud2.draw(g);
+        cloud3.draw(g);
 
+        Tree tree1 = new Tree(200, 600, 85, new Color(160, 82, 45), new Color(34, 139, 34));
+        Tree tree2 = new Tree(900, 600, 85, new Color(160, 82, 45), new Color(34, 139, 34));
 
+        tree1.draw(g);
+        tree2.draw(g);
     }
 
 

@@ -20,6 +20,6 @@ public class Tree {
     }
 
     public void draw(Graphics2D g){
-        DrawingUtils.drawTree(g, x, y, st, lists, diametr);
+        DrawingUtils.drawTree(g, x, y, diametr, st, lists);
     }
 }
