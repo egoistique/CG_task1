@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.elements.Cloud;
+import com.company.elements.Tractor;
 import com.company.elements.Tree;
 
 import javax.swing.*;
@@ -40,6 +41,7 @@ public class DrawPanel extends JPanel {
 //        }
 //        g.draw(s);
 
+
         Cloud cloud1 = new Cloud(90, 70, 9, 80, new Color(255, 240, 245), new Color(245, 255, 250), new Color(240, 248, 255));
         Cloud cloud2 = new Cloud(900, 140, 7, 80, new Color(255, 240, 245), new Color(245, 255, 250), new Color(240, 248, 255));
         Cloud cloud3 = new Cloud(400, 40, 13, 80, new Color(255, 240, 245), new Color(245, 255, 250), new Color(240, 248, 255));
@@ -52,6 +54,9 @@ public class DrawPanel extends JPanel {
 
         tree1.draw(g);
         tree2.draw(g);
+
+        Tractor tractor1 =  new Tractor(400, 800, new Color(255, 140, 0));
+        tractor1.draw(g);
     }
 
 

@@ -46,12 +46,29 @@ public class DrawingUtils {
             x += diam / 2;
         }
 
-
         g.setColor(oldColor);
     }
 
     public static double getRandomInt(double min, double max){
         double x = (int)(Math.random()*((max-min)+1))+min;
         return x;
+    }
+
+    public static void drawTractor(Graphics2D g, int x, int y, Color c){
+        Color oldColor = g.getColor();
+        g.setColor(c);
+        g.fillRoundRect(x, y - 150, 300, 150, 20, 20);
+        g.fillRect(x + 150,  y - 250, 140, 100);
+        g.fillRoundRect(x + 140,  y - 270, 160, 20, 5, 5);
+        g.fillRect(x + 50,  y - 250, 20, 100);
+        g.setColor(new Color(176, 224, 230));
+        g.fillRoundRect(x + 190,  y - 230, 60, 80, 10, 10);
+        g.setColor(Color.BLACK);
+        g.fillOval(x - 30, y - 120, 150, 150);
+        g.fillOval(x + 180, y - 150, 180, 180);
+        g.setColor(new Color(	210, 105, 30));
+        g.fillOval(x , y - 90, 90, 90);
+        g.fillOval(x + 210, y - 120, 120, 120);
+        g.setColor(oldColor);
     }
 }
