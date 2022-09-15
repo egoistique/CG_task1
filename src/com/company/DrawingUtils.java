@@ -56,19 +56,49 @@ public class DrawingUtils {
 
     public static void drawTractor(Graphics2D g, int x, int y, Color c){
         Color oldColor = g.getColor();
+        Color colOfWindow = new Color(176, 224, 230);
+        Color colOfInsert = new Color(255, 228, 181);
+        Color colOfWeels = new Color(210, 105, 30);
+        Color colOfInsertWeels = new Color(255, 228, 181);
+
         g.setColor(c);
         g.fillRoundRect(x, y - 150, 300, 150, 20, 20);
         g.fillRect(x + 150,  y - 250, 140, 100);
+
+        g.setColor(colOfInsert);
+        g.fillRect(x + 150,  y - 250, 140, 5);
+
+        g.setColor(c);
         g.fillRoundRect(x + 140,  y - 270, 160, 20, 5, 5);
         g.fillRect(x + 50,  y - 250, 20, 100);
-        g.setColor(new Color(176, 224, 230));
+
+        g.setColor(colOfWindow);
         g.fillRoundRect(x + 190,  y - 230, 60, 80, 10, 10);
+
         g.setColor(Color.BLACK);
         g.fillOval(x - 30, y - 120, 150, 150);
         g.fillOval(x + 180, y - 150, 180, 180);
-        g.setColor(new Color(	210, 105, 30));
+
+        g.setColor(colOfWeels);
         g.fillOval(x , y - 90, 90, 90);
         g.fillOval(x + 210, y - 120, 120, 120);
+
+        g.setColor(colOfInsertWeels);
+        g.fillRect(x, y - 135, 120, 10);
+
+        g.setColor(oldColor);
+    }
+
+    public static void drawFlower(Graphics2D g, int x, int y, int diametr, Color c){
+        Color oldColor = g.getColor();
+        g.setColor(c);
+        g.fillOval(x - diametr, y - diametr, diametr, diametr);
+        g.fillOval(x, y - diametr, diametr, diametr);
+        g.fillOval(x , y , diametr, diametr);
+        g.fillOval(x - diametr, y , diametr, diametr);
+
+        g.setColor(Color.YELLOW);
+        g.fillOval(x - diametr/2, y - diametr/2, diametr, diametr);
         g.setColor(oldColor);
     }
 }
